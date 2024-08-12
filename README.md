@@ -14,7 +14,23 @@ this line above counts down to 2024 October 22nd at midnight in GMT+0 (I think..
 
 you can also add anything to do after the countdown to happen in the if statement starting on line 36. For example:
 
-`os.startfile(<path to file>)`
+- WINDOWS:
+```python
+import os
+os.startfile(<path to file>)
+```
+
+- MACOS:
+```python
+import subprocess
+subprocess.call(('open', <path to file>))
+```
+
+- LINUX:
+```python
+import subprocess
+subprocess.call(('xdg-open', <path to file>))
+```
 
 this would open a file in its normal application. For example an MP3 file to give a sound
 
